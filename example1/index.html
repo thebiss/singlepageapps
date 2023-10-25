@@ -27,7 +27,7 @@
             .then((result) => {   
                 result.components.canvas.value = "removed";  // noisy
                 result.components.math.value = "removed";    // not interesting
-                result.components.webGlExtensions.value.parameters = "pruned";
+                result.components.webGlExtensions.value = "pruned";
                 document.getElementById("data").innerHTML=JSON.stringify(result,null,4)
             });
             
