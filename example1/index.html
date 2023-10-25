@@ -6,6 +6,10 @@
         html {
             background: #ffffff;
         }
+
+        #data {
+            column-count: 2;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +29,7 @@
         // Get the visitor identifier when you need it.
         fpPromise
             .then(fp => fp.get())
-            .then(result => document.getElementById("data").innerHTML=JSON.stringify(result))
+            .then(result => document.getElementById("data").innerHTML=JSON.stringify(result,null,4))
             
 
     </script>
