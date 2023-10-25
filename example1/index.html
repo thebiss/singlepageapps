@@ -25,8 +25,8 @@
         fpPromise
             .then(fp => fp.get())
             .then((result) => {   
-                result.components?.canvas?.value = {};  // noisy
-                result.components?.math?.value = {};    // not interesting
+                result.components.canvas.value = {};  // noisy
+                result.components.math.value = {};    // not interesting
                 document.getElementById("data").innerHTML=JSON.stringify(result,null,4)
             });
             
