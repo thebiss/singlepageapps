@@ -10,5 +10,24 @@
 </head>
 <body>
     Empty.
+    <div>
+        <p id="data"></p>
+    </div>
+
+    <script>
+        //document.getElementById("data").innerHTML = JSON.stringify(navigator);
+
+        // Initialize the agent at application startup.
+        // You can also use https://openfpcdn.io/fingerprintjs/v4/esm.min.js
+        const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4/esm.min.js')
+            .then(FingerprintJS => FingerprintJS.load())
+
+        // Get the visitor identifier when you need it.
+        fpPromise
+            .then(fp => fp.get())
+            .then(result => document.getElementById("data").innerHTML=result)
+            
+
+    </script>
 </body>
 </html>
