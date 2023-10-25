@@ -25,7 +25,7 @@
         // Get the visitor identifier when you need it.
         fpPromise
             .then(fp => fp.get())
-            .then(result => document.getElementById("data").innerHTML=result)
+            .then(result => document.getElementById("data").innerHTML=JSON.stringify(result))
             
 
     </script>
